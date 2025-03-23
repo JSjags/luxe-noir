@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Appointment - LUXE NOIR</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html" class="logo">LUXE NOIR</a>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="products.html">Collections</a></li>
+          <li><a href="trustees.html">Our Team</a></li>
+          <li><a href="appointments.html">Book Appointment</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </nav>
+      <div class="ticker">
+        <div class="ticker-list">
+          <div class="ticker-item">
+            Summer Collection Launch - <span>June 15, 2025</span>
+          </div>
+          <div class="ticker-item">
+            Private Viewing Event - <span>July 10, 2025</span>
+          </div>
+          <div class="ticker-item">
+            Fashion Week Showcase - <span>August 20, 2025</span>
+          </div>
+          <div class="ticker-item">
+            Holiday Collection Preview - <span>September 5, 2025</span>
+          </div>
+          <div class="ticker-item">
+            Autumn/Winter Collection - <span>October 1, 2025</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="appointment-container">
+      <div class="appointment-hero">
+        <h1>Book an Appointment</h1>
+        <p>Schedule a private consultation with our fashion experts</p>
+      </div>
+
+      <div class="appointment-wrapper">
+        <form id="appointment-form" class="appointment-form">
+          <div class="form-header">
+            <h2>Personal Details</h2>
+            <p>Please fill in your information below</p>
+          </div>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required minlength="3" />
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            />
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              pattern="[0-9]{11}"
+            />
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required min="" />
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="time">Preferred Time</label>
+            <select id="time" name="time" required>
+              <option value="">Select a time slot</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Type</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option value="personal-styling">Personal Styling</option>
+              <option value="wardrobe-consultation">
+                Wardrobe Consultation
+              </option>
+              <option value="custom-fitting">Custom Fitting</option>
+              <option value="collection-preview">Collection Preview</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              maxlength="500"
+              placeholder="Tell us about your style preferences or any specific requirements"
+            ></textarea>
+            <span class="error-message"></span>
+          </div>
+          <button type="submit" class="submit-btn">Book Appointment</button>
+        </form>
+      </div>
+
+      <!-- Success Modal -->
+      <div id="success-modal" class="modal">
+        <div class="modal-content">
+          <div class="success-icon">✓</div>
+          <h2>Booking Confirmed!</h2>
+          <p>
+            Thank you for choosing LUXE NOIR. We'll contact you shortly to
+            confirm your appointment.
+          </p>
+          <button class="close-modal">Close</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 LUXE NOIR. All rights reserved.</p>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/appointments.js"></script>
+  </body>
+</html>
